@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Poppins|Source+Sans+Pro|Montserrat:400,900&display=swap");
+
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", "Poppins", sans-serif;
+}
+body, html {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+.menu {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.menu-group-heading {
+  margin: 0;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #ccc;
+}
+
+.menu-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+article {
+  color:#fff;
+}
+footer {
+  color: #fff;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff5e1;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #d9534f;
+}
+
+.menu-section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+  background-color: #ffefd5;
+}
+
+.menu-item.selected {
+  background-color: #ffd700;
+}
+article {
+  font-size: 2em;
+}
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+html {
+  background-image: url("Gym.png");
+  font-family: Verdana, Geneva, sans-serif;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(213, 241, 255);
+  box-shadow: rgb(51, 51, 51) 10px 0px 40px, rgb(51, 51, 51) -10px 0px 40px;
+  border-left: 1px solid rgb(3, 51, 86);
+  border-right: 1px solid rgb(3, 51, 86);
+  min-height: 100%;   
+  margin: 0px auto;
+  min-width: 320px;
+  max-width: 1024px;   
+  width: 100%;
+}
+
+
+/* Header styles */
+
+header {
+  background: linear-gradient(to right, rgb(166, 222, 254) 20%, rgb(3, 51, 86));
+  border-bottom: 1px solid rgb(3, 51, 86);
+}
+
+header img#logoimg {
+  display: block;
+  margin: 0px auto;
+  width: 100%;
+}
+
+/* Navigation list styles */
+
+header nav ul {
+  background: linear-gradient(to right, rgb(166, 222, 254) 20%, rgb(3, 51, 86)); 
+  width: 100%;
+}
+
+header nav ul li {
+  font-size: 1em;   
+}
+
+header nav ul li a {
+  color: rgb(231, 231, 231);
+  text-shadow: rgb(51, 51, 51) 0px 0px 1px, rgb(51, 51, 51) 0px 0px 8px;
+  display: block;
+  padding: 5px 20px;
+  width: 100%;
+}
+
+header nav ul li a:hover {
+  color: white;
+  background-color: rgb(3, 51, 86);
+}
+
+a#navicon {
+  display: none;
+}
+
+/* Article Styles */
+
+article {
+  margin: 40px auto;
+  width: 85%;
+}
+
+article h1 {
+  color: rgb(33, 88, 132);
+  text-shadow: white -2px 0px 0px, rgb(151, 151, 151) -14px 0px 8px;
+  font-family: Speeder;
+  font-weight: normal;
+  font-size: 1.5em;
+  font-style: oblique;
+  letter-spacing: 0.03em;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}
+
+article p {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+
+/* Footer styles */   
+
+footer {
+  color: white;    
+  background: linear-gradient(to bottom, rgb(3, 51, 86), black);
+  font-size: 0.9em;  
+  font-style: normal;
+}
+
+footer nav ul {
+  float: left;
+  padding: 30px;
+  width: 25%;
+}
+
+footer nav ul a {
+  color: white;
+}
+
+footer nav ul a:hover {
+  text-decoration: underline;
+}
+
+footer img.clipart {
+  float: left;
+  display: block;
+  width: 25%;
+  position: relative;
+  top: -60px;
+  left: -20px
+}
+
+footer::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+/* ===============================
+  Mobile Styles: 0px to 640px 
+  ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+  
+  a#navicon {
+     display: block;
+  }
+  
+  header nav {
+     padding-bottom: 15px;
+  }
+  
+  header nav ul {
+     display: none;
+  }
+  
+  header nav ul li {
+     font-size: 1em;
+     line-height: 1.3em;
+     height: 1.3em;
+  }
+  
+  a#navicon:hover+ul, header nav ul:hover {
+     display: block;
+  }
+  
+  header img#logoimg {
+     width: 100%;
+  }
+}
+
+/* =============================================
+  Tablet and Desktop Styles: greater than 640px
+  =============================================
+*/
+@media only screen and (min-width: 641px) {
+
+  
+  
+  header nav ul {
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: center;
+  }
+  
+  header nav ul li {
+     flex: 0 1 auto;
+  }
+}

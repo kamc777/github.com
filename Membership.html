@@ -1,0 +1,111 @@
+<html>
+<head>
+    <link href="mid_style.css" rel="stylesheet" />
+    <title>Menbership</title>
+    <script>
+    function doClear() {
+    document.PizzaForm.customer.value = "";
+    document.PizzaForm.address.value = "";
+    document.PizzaForm.city.value = "";
+    document.PizzaForm.state.value = "";
+    document.PizzaForm.zip.value = "";
+    document.PizzaForm.phone.value = "";
+
+    document.PizzaForm.sizes[0].checked = false;
+    document.PizzaForm.sizes[1].checked = false;
+    document.PizzaForm.sizes[2].checked = false;
+
+    document.PizzaForm.creditcard.value = "";
+    document.PizzaForm.Expiration Date.value = "";
+    document.PizzaForm.CVV.value = "";
+    document.PizzaForm.BillingZIP code.value = "";
+    
+
+
+    return;
+}
+function doSubmit() {
+    if (validateText() == false) {
+        alert("Required data missing in Step 1");
+        return;
+    }
+    if (validateRadio() == false) {
+        alert("Required date missing in Step 2");
+        return;
+    }
+    alert("Your pizza order has been submitted.");
+    return;
+}
+
+function validateText() {
+    var customer = document.PizzaForm.customer.value;
+    if (customer.length == 0) return false;
+
+    var address = document.PizzaForm.address.value;
+    if (address.length == 0) return false;
+
+    var city = document.PizzaForm.city.value;
+    if (city.length == 0) return false;
+
+    var phone = document.PizzaForm.phone.value;
+    if (phone.length == 0) return false;
+
+    return true;
+}
+
+function validateRadio() {
+    if (document.PizzaForm.sizes[0].checked) return true;
+    if (document.PizzaForm.sizes[1].checked) return true;
+    if (document.PizzaForm.sizes[2].checked) return true;
+    return false;
+}
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav__logo">
+          <a href="#"><img src="gym logo2.png" alt="logo" /></a>
+        </div>
+        <ul class="nav__links">
+          <li class="link"><a href="index.html">Home</a></li>
+          <li class="link"><a href="Membership.html">Membership</a></li>
+          <li class="link"><a href="ABOUT_US.html">About us</a></li>
+        </ul>
+    <form name="PizzaForm">
+        <h1>chipun fitness</h1>
+        <p>
+            <h4>Step 1: Enter your name, address, and phone number:</h4>
+            <font face="Courier New">
+                Name: &nbsp;&nbsp;&nbsp;<input name="customer" size="50" type="text"><br>
+                Address: <input name="address" size="50" type="text"><br>
+                City: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="city" size="15" type="text"><br>
+                State: <input name="state" size="2" type="TEXT">
+                Zip: <input name="zip" size="5" type="text"><br>
+                Phone: &nbsp;&nbsp;<input name="phone" size="50" type="text"><br>
+            </font>
+        </p>
+        <p>
+            <h4>Step 2: Select the plan you want:</h4>
+            <font face="Courier New">
+                <input name="sizes" type="radio">CLASSIC 15$/month<br>
+                <p>Our standard membership, with unlimited access to your home club.</p>
+                <input name="sizes" type="radio">PF BLACK CARD 40$/month<br>
+                <p>Access to any club, bring a guest anytime, PF+ premium digital workouts, and so much more!</p>
+            </font>
+        </p>
+        <p>
+            <h4>Add your payment information</h4>
+            <font face="Courier New">
+                creditcard: &nbsp;&nbsp;&nbsp;<input name="creditcard" size="12" type="text"><br>
+                Expiration Date: <input name="Expiration Date" size="4" type="text"><br>
+                CVV: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="CVV" size="3" type="text"><br>
+                Zip: <input name="BillingZIP code" size="5" type="text"><br>
+                
+
+            </font>
+        </p>
+        <input type="button" value="Submit Order" onClick="doSubmit()">
+        <input type="button" value="Clear Entries" onClick="doClear()">
+    </form>
+</body>
+</html>
